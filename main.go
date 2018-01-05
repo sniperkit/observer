@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"github.com/demas/observer/pkg/services/fetchers"
+)
 
 func main() {
-	fmt.Println("Hello")
+	(&fetchers.StackFetcher{}).Fetch()
 }

@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed303021-b36a-4438-8e14-e7c938a62604" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/pkg/rest_api/controllers/auth_controller.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pkg/rest_api/controllers/controllers.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pkg/rest_api/controllers/stack_controller.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pkg/rest_api/rest-api.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pkg/rest_api/routers/authentication.go" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pkg/rest_api/routers/router.go" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Dockerfile" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/docker-compose.yml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/main.go" afterPath="$PROJECT_DIR$/main.go" />
-      <change beforePath="$PROJECT_DIR$/pkg/datastore/init.go" afterPath="$PROJECT_DIR$/pkg/datastore/init.go" />
-      <change beforePath="$PROJECT_DIR$/pkg/datastore/interface.go" afterPath="$PROJECT_DIR$/pkg/datastore/interface.go" />
-      <change beforePath="$PROJECT_DIR$/pkg/datastore/stack_overflow.go" afterPath="$PROJECT_DIR$/pkg/datastore/stack_overflow.go" />
-      <change beforePath="$PROJECT_DIR$/pkg/datastore/types.go" afterPath="$PROJECT_DIR$/pkg/datastore/types.go" />
-      <change beforePath="$PROJECT_DIR$/pkg/models/stack_overflow.go" afterPath="$PROJECT_DIR$/pkg/models/stack_overflow.go" />
-      <change beforePath="$PROJECT_DIR$/pkg/services/fetchers/stack_fetcher.go" afterPath="$PROJECT_DIR$/pkg/services/fetchers/stack_fetcher.go" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,7 +68,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="stack_overflow.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="stack_overflow.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pkg/datastore/stack_overflow.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="519">
@@ -87,6 +76,26 @@
               <folding>
                 <element signature="e#19#80#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dockerfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="385">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="docker-compose.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -131,16 +140,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="value.go" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/scoop/apps/go/current/src/reflect/value.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="1350" column="0" lean-forward="false" selection-start-line="1350" selection-start-column="0" selection-end-line="1350" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="callback_query.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../jinzhu/gorm/callback_query.go">
           <provider selected="true" editor-type-id="text-editor">
@@ -167,18 +166,6 @@
             <state relative-caret-position="974">
               <caret line="42" column="1" lean-forward="true" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="router.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pkg/rest_api/routers/router.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="14" column="103" lean-forward="true" selection-start-line="14" selection-start-column="103" selection-end-line="14" selection-end-column="103" />
-              <folding>
-                <element signature="e#17#107#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -231,6 +218,8 @@
         <option value="$PROJECT_DIR$/pkg/datastore/types.go" />
         <option value="$PROJECT_DIR$/pkg/datastore/init.go" />
         <option value="$PROJECT_DIR$/pkg/datastore/stack_overflow.go" />
+        <option value="$PROJECT_DIR$/Dockerfile" />
+        <option value="$PROJECT_DIR$/docker-compose.yml" />
       </list>
     </option>
   </component>
@@ -272,71 +261,6 @@
               <item name="observer" type="b2602c69:ProjectViewProjectNode" />
               <item name="observer" type="462c0819:PsiDirectoryNode" />
               <item name="pkg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="observer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="observer" type="462c0819:PsiDirectoryNode" />
-              <item name="pkg" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="observer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="observer" type="462c0819:PsiDirectoryNode" />
-              <item name="pkg" type="462c0819:PsiDirectoryNode" />
-              <item name="datastore" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="observer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="observer" type="462c0819:PsiDirectoryNode" />
-              <item name="pkg" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="observer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="observer" type="462c0819:PsiDirectoryNode" />
-              <item name="pkg" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="observer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="observer" type="462c0819:PsiDirectoryNode" />
-              <item name="pkg" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_api" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="observer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="observer" type="462c0819:PsiDirectoryNode" />
-              <item name="pkg" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_api" type="462c0819:PsiDirectoryNode" />
-              <item name="routers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="observer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="observer" type="462c0819:PsiDirectoryNode" />
-              <item name="pkg" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="observer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="observer" type="462c0819:PsiDirectoryNode" />
-              <item name="pkg" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-              <item name="classificators" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="observer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="observer" type="462c0819:PsiDirectoryNode" />
-              <item name="pkg" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-              <item name="fetchers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="observer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="observer" type="462c0819:PsiDirectoryNode" />
-              <item name="pkg" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-              <item name="service_locator" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -486,7 +410,7 @@
       <option name="presentableId" value="Default" />
       <updated>1515160074037</updated>
       <workItem from="1515160077833" duration="46000" />
-      <workItem from="1515160314109" duration="15884000" />
+      <workItem from="1515160314109" duration="16133000" />
     </task>
     <task id="LOCAL-00001" summary="Сборщик вопросов со StackOverflow">
       <created>1515178311220</created>
@@ -495,11 +419,18 @@
       <option name="project" value="LOCAL" />
       <updated>1515178311220</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="REST API">
+      <created>1515182272728</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1515182272728</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15930000" />
+    <option name="totallyTimeSpent" value="16179000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="3866" height="2106" extended-state="6" />
@@ -544,7 +475,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Сборщик вопросов со StackOverflow" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сборщик вопросов со StackOverflow" />
+    <MESSAGE value="REST API" />
+    <option name="LAST_COMMIT_MESSAGE" value="REST API" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -848,6 +780,22 @@
           <folding>
             <element signature="e#19#80#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>

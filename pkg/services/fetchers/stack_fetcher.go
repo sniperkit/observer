@@ -39,13 +39,6 @@ const soKeyEnvVariable = "SOKEY"
 
 var log = services.GetLogger("main")
 
-
-
-
-func heartBeat() {
-	fmt.Println("working...")
-}
-
 func key() string {
 
 	if os.Getenv(soKeyEnvVariable) != "" {
@@ -126,5 +119,4 @@ func (f *StackFetcher) Fetch() {
 	}
 
 	go common.DoEvery(time.Minute * time.Duration(syncInterval), fetchQuestions)
-	common.DoEvery(time.Second * 10, heartBeat)
 }

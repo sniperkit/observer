@@ -24,7 +24,7 @@ type StackQuestion struct {
 
 	Title            string `gorm:"size:500"`
 	Link             string `gorm:"size:500"`
-	QuestionId       uint32    `gorm:"column:questionid"`
+	QuestionId       uint32 `gorm:"column:questionid"`
 	Tags             string `gorm:"size:300"`
 	Score            int
 	AnswerCount      int

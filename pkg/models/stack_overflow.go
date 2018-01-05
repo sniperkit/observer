@@ -33,3 +33,35 @@ type SOResponse struct {
 	Quota_max       int
 	Quota_remaining int
 }
+
+type StackTag struct {
+
+	Id 			   int `json:"id"`
+	Classification string `json:"classification"`
+	Unreaded       int `json:"unreaded"`
+	Hidden         int `json:"hidden"`
+}
+
+
+type StackQuestion struct {
+
+	Id               int    `json:"id"`
+	Title            string `json:"title"`
+	Link             string `json:"link"`
+	QuestionId       int    `json:"questionid"`
+	Tags             string `json:"tags"`
+	Score            int    `json:"score"`
+	AnswerCount      int    `json:"answercount"`
+	ViewCount        int    `json:"viewcount"`
+	UserId           int	`json:"userid"`
+	UserReputation   int 	`json:"userreputation"`
+	UserDisplayName  string `json:"userdisplayname"`
+	UserProfileImage string `json:"userprofileimage"`
+	Classification   string `json:"classification"`
+	Details          string `json:"details"`
+	Readed 			 int    `json:"readed"`
+	CreationDate     int64  `json:"creationdate"`
+	Favorite         int    `json:"favorite"`
+	Classified       int    `json:"classified"`
+	Site             string `json:"site"`
+}

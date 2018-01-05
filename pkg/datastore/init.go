@@ -20,5 +20,6 @@ func init() {
 		fmt.Println(err.Error())
 	}
 
+	db.LogMode(true)
 	db.AutoMigrate(StackTag{}, StackQuestion{}, Settings{})
 }

@@ -5,6 +5,42 @@ import (
 	"strings"
 )
 
+func (ds *DataStore) GetStackTags() []models.StackTag {
+
+	result := []models.StackTag{}
+	db.Where("unreaded > 0 and hidden = 0").Find(&result)
+	return result
+}
+
+func (ds *DataStore) GetSecondTagByClassification(classification string) interface{} {
+
+	type Result struct {
+		Details string `json:"details"`
+		Count   int    `json:"count"`
+	}
+
+	result := []Result{}
+	db.Table("stack_questions").Select("details, count(id) as count").Group("details").Scan(&result)
+	return result
+}
+
+func (ds *DataStore) GetStackQuestionsByClassification(classification string) []models.StackQuestion {
+
+	result := []models.StackQuestion{}
+	db.Model(StackQuestion{}).
+		Where("classification = ? and readed = 0", classification).Order("score desc").Find(&result)
+
+	return result
+}
+
+func (ds *DataStore) GetStackQuestionsByClassificationAndDetails(classification string, details string) []models.StackQuestion {
+
+	result := []models.StackQuestion{}
+	db.Model(StackQuestion{}).Where("classification = ? and details = ? and readed = 0", classification, details).
+		Order("score desc").Limit(15).Find(&result)
+	return result
+}
+
 func (ds *DataStore) InsertStackOverflowQuestions(questionsMap map[string][]models.SOQuestion) {
 
 	for site, questions  := range questionsMap {
@@ -46,4 +82,40 @@ func (ds *DataStore) InsertStackOverflowQuestions(questionsMap map[string][]mode
 			db.Save(&stackTag)
 		}
 	}
+}
+
+func (ds *DataStore) SetStackQuestionAsReaded(question_id int) {
+
+	var question StackQuestion
+	db.Find(&question, question_id)
+	question.Readed = 1
+	db.Save(&question)
+
+	stackTag := StackTag{}
+	db.Where("classification = ?", question.Classification).First(&stackTag)
+	stackTag.Unreaded -= 1
+	db.Save(&stackTag)
+}
+
+func (ds *DataStore) SetStackQuestionsAsReadedByClassification(classification string) {
+
+	db.Model(StackQuestion{}).Where("classification = ?", classification).UpdateColumn("readed", 1)
+	stackTag := StackTag{}
+	db.Where("classification = ?", classification).First(&stackTag)
+	stackTag.Unreaded = 0
+	db.Save(&stackTag)
+}
+
+func (ds *DataStore) SetStackQuestionsAsReadedByClassificationFromTime(classification string, t int64) {
+
+	var count int
+
+	db.Model(&StackQuestion{}).Where("classification = ? and creationdate < ?", classification, t).Count(&count)
+	db.Model(StackQuestion{}).Where("classification = ? and creationdate < ?", classification, t).
+		UpdateColumn("readed", 1)
+
+	stackTag := StackTag{}
+	db.Where("classification = ?", classification).First(&stackTag)
+	stackTag.Unreaded -= count
+	db.Save(&stackTag)
 }

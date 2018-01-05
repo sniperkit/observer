@@ -36,10 +36,10 @@ type SOResponse struct {
 
 type StackTag struct {
 
-	Id 			   int `json:"id"`
-	Classification string `json:"classification"`
-	Unreaded       int `json:"unreaded"`
-	Hidden         int `json:"hidden"`
+	Id 			   int `json:"Id"`
+	Classification string `json:"Classification"`
+	Unreaded       int `json:"Unreaded"`
+	Hidden         int `json:"Hidden"`
 }
 
 
@@ -48,7 +48,7 @@ type StackQuestion struct {
 	Id               int    `json:"id"`
 	Title            string `json:"title"`
 	Link             string `json:"link"`
-	QuestionId       int    `json:"questionid"`
+	QuestionId       uint32    `json:"questionid"`
 	Tags             string `json:"tags"`
 	Score            int    `json:"score"`
 	AnswerCount      int    `json:"answercount"`
@@ -60,7 +60,7 @@ type StackQuestion struct {
 	Classification   string `json:"classification"`
 	Details          string `json:"details"`
 	Readed 			 int    `json:"readed"`
-	CreationDate     int64  `json:"creationdate"`
+	CreationDate     uint32  `json:"creationdate"`
 	Favorite         int    `json:"favorite"`
 	Classified       int    `json:"classified"`
 	Site             string `json:"site"`

@@ -20,7 +20,8 @@ func (ds *DataStore) GetSecondTagByClassification(classification string) interfa
 	}
 
 	result := []Result{}
-	db.Table("stack_questions").Select("details, count(id) as count").Group("details").Scan(&result)
+	db.Table("stack_questions").Select("details, count(id) as count").
+		Where("classification = ?", classification).Group("details").Scan(&result)
 	return result
 }
 
@@ -87,7 +88,7 @@ func (ds *DataStore) InsertStackOverflowQuestions(questionsMap map[string][]mode
 func (ds *DataStore) SetStackQuestionAsReaded(question_id int) {
 
 	var question StackQuestion
-	db.Find(&question, question_id)
+	db.Model(StackQuestion{}).Where("question_id = ?", question_id).First(&question)
 	question.Readed = 1
 	db.Save(&question)
 

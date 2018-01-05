@@ -41,3 +41,23 @@ type StackQuestion struct {
 	Classified       int
 	Site             string `gorm:"size:100"`
 }
+
+type Tag struct {
+	gorm.Model
+
+	Title    string `gorm:"size:40"`
+	Total    int
+	Unreaded int
+}
+
+type TaggedItem struct {
+	gorm.Model
+
+	TagId   int
+	Title   string `gorm:"size:500"`
+	Summary string `gorm:"size:500"`
+	Content string `gorm:"size:500"`
+	Link    string `gorm:"size:500"`
+	Date    int64
+	Source  int
+}

@@ -18,5 +18,11 @@ func InitRoutes() *mux.Router {
 	router.HandleFunc("/stack/tags/as-read", controllers.PostWrapHandler(controllers.SetStackQuestionsAsReaded)).Methods("POST")
 	router.HandleFunc("/stack/tags/from-time/as-read", controllers.PostWrapHandler(controllers.SetStackQuestionsAsReadedFromTime)).Methods("POST")
 
+	// tags
+	router.HandleFunc("/tags", controllers.WrapHandler(controllers.GetTags))
+	router.HandleFunc("/tags/items/{tagId}", controllers.WrapHandler(controllers.GetTaggedItemsByTagId)).Methods("GET")
+	router.HandleFunc("/tags/add-item", controllers.PostWrapHandler(controllers.InsertTaggedItem)).Methods("POST")
+	router.HandleFunc("/tags/items/{id}", controllers.PostWrapHandler(controllers.DeleteTaggedItem)).Methods("DELETE")
+
 	return router
 }

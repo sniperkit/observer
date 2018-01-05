@@ -21,5 +21,5 @@ func init() {
 	}
 
 	db.LogMode(true)
-	db.AutoMigrate(StackTag{}, StackQuestion{}, Settings{})
+	db.AutoMigrate(StackTag{}, StackQuestion{}, Settings{}, Tag{})
 }

@@ -19,6 +19,12 @@ type IDataStore interface {
 	SetStackQuestionAsReaded(question_id int)
 	SetStackQuestionsAsReadedByClassification(classification string)
 	SetStackQuestionsAsReadedByClassificationFromTime(classification string, t int64)
+
+	// Tags
+	GetTags() []models.Tag
+	GetTaggedItemsByTagId(tagId int) []models.TaggedItem
+	InsertTaggedItem(questionId int, tagId int)
+	DeleteTaggedItem(id int)
 }
 
 type DataStore struct {}

@@ -29,6 +29,10 @@ type UniversalPostStruct struct {
 	Tag string `json:"tag"`
 }
 
+type ResultOk struct {
+	Result string `json:"result"`
+}
+
 type HandlerFunc func(w http.ResponseWriter, req *http.Request) (interface{}, error)
 
 func WrapHandler(handler HandlerFunc) http.HandlerFunc {

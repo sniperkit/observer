@@ -6,8 +6,6 @@ import (
 	"os"
 	"io/ioutil"
 	"encoding/json"
-	"path/filepath"
-	"fmt"
 )
 
 type FirstLevelRule struct {
@@ -29,19 +27,14 @@ type StackClassificatorRules struct {
 	SecondLevelRules []SecondLevelRule `json:"second_level_rules"`
 }
 
-const rulesFileName = "/classificator.json"
+const rulesFileName = "classificator.json"
 
 var rules StackClassificatorRules
 var log = services.GetLogger("classificator")
 
 func init() {
 
-	dir, err := filepath.Abs(filepath.Dir(os.Args[0]))
-	if err != nil {
-		log.Error(err.Error())
-	}
-
-	jsonFile, err := os.Open(dir + rulesFileName)
+	jsonFile, err := os.Open(rulesFileName)
 	if err != nil {
 		log.Error(err.Error())
 		panic(err)

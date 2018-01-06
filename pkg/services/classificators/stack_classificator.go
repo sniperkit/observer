@@ -6,6 +6,8 @@ import (
 	"os"
 	"io/ioutil"
 	"encoding/json"
+	"path/filepath"
+	"fmt"
 )
 
 type FirstLevelRule struct {
@@ -33,6 +35,12 @@ var rules StackClassificatorRules
 var log = services.GetLogger("classificator")
 
 func init() {
+
+	dir, err := filepath.Abs(filepath.Dir(os.Args[0]))
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(dir)
 
 	jsonFile, err := os.Open(rulesFileName)
 	if err != nil {

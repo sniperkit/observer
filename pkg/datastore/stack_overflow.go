@@ -21,7 +21,7 @@ func (ds *DataStore) GetSecondTagByClassification(classification string) interfa
 
 	result := []Result{}
 	db.Table("stack_questions").Select("details, count(id) as count").
-		Where("classification = ?", classification).Group("details").Scan(&result)
+		Where("classification = ? and readed= 0", classification).Group("details").Scan(&result)
 	return result
 }
 

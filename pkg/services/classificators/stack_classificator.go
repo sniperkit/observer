@@ -29,7 +29,7 @@ type StackClassificatorRules struct {
 	SecondLevelRules []SecondLevelRule `json:"second_level_rules"`
 }
 
-const rulesFileName = "./classificator.json"
+const rulesFileName = "/classificator.json"
 
 var rules StackClassificatorRules
 var log = services.GetLogger("classificator")
@@ -38,14 +38,13 @@ func init() {
 
 	dir, err := filepath.Abs(filepath.Dir(os.Args[0]))
 	if err != nil {
-		log.Fatal(err)
+		log.Error(err.Error())
 	}
-	fmt.Println(dir)
 
-	jsonFile, err := os.Open(rulesFileName)
+	jsonFile, err := os.Open(dir + rulesFileName)
 	if err != nil {
 		log.Error(err.Error())
-		//panic(err)
+		panic(err)
 	}
 	defer jsonFile.Close()
 
@@ -53,7 +52,7 @@ func init() {
 	err = json.Unmarshal(byteValue, &rules)
 	if err != nil {
 		log.Error(err.Error())
-		//panic(err)
+		panic(err)
 	}
 }
 

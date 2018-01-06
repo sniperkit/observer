@@ -9,6 +9,8 @@ services:
       - USER=demas
       - PASS=root
       - PORT=4000
+    volumes:
+      - classificator.json:/go/bin/classificator.json
     ports:
       - 4000:4000
   web:

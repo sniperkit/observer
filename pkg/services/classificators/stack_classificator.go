@@ -45,7 +45,7 @@ func init() {
 	jsonFile, err := os.Open(rulesFileName)
 	if err != nil {
 		log.Error(err.Error())
-		panic(err)
+		//panic(err)
 	}
 	defer jsonFile.Close()
 
@@ -53,7 +53,7 @@ func init() {
 	err = json.Unmarshal(byteValue, &rules)
 	if err != nil {
 		log.Error(err.Error())
-		panic(err)
+		//panic(err)
 	}
 }
 

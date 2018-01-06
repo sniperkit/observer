@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed303021-b36a-4438-8e14-e7c938a62604" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6c0380ad-5fdb-41d5-a7d7-3ceb0a734fd9.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/6c0380ad-5fdb-41d5-a7d7-3ceb0a734fd9.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6c0380ad-5fdb-41d5-a7d7-3ceb0a734fd9/storage_v2/_src_/database/rss.UroBAA/schema/public.abK9xQ.meta" afterPath="$PROJECT_DIR$/.idea/dataSources/6c0380ad-5fdb-41d5-a7d7-3ceb0a734fd9/storage_v2/_src_/database/rss.UroBAA/schema/public.abK9xQ.meta" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/classificator.json" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/pkg/datastore/stack_overflow.go" afterPath="$PROJECT_DIR$/pkg/datastore/stack_overflow.go" />
-      <change beforePath="$PROJECT_DIR$/pkg/datastore/types.go" afterPath="$PROJECT_DIR$/pkg/datastore/types.go" />
-      <change beforePath="$PROJECT_DIR$/pkg/models/stack_overflow.go" afterPath="$PROJECT_DIR$/pkg/models/stack_overflow.go" />
+      <change beforePath="$PROJECT_DIR$/pkg/services/classificators/stack_classificator.go" afterPath="$PROJECT_DIR$/pkg/services/classificators/stack_classificator.go" />
+      <change beforePath="$PROJECT_DIR$/pkg/services/classificators/stack_rules.go" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,112 +60,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="interface.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pkg/datastore/interface.go">
+      <file leaf-file-name="classificator.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/classificator.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="910">
-              <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-              <folding>
-                <element signature="e#19#69#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tags.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pkg/datastore/tags.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="3" column="42" lean-forward="false" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+            <state relative-caret-position="1379">
+              <caret line="271" column="93" lean-forward="true" selection-start-line="271" selection-start-column="93" selection-end-line="271" selection-end-column="93" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="router.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pkg/rest_api/routers/router.go">
+      <file leaf-file-name="stack_classificator.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pkg/services/classificators/stack_classificator.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="21" column="54" lean-forward="false" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+            <state relative-caret-position="2940">
+              <caret line="84" column="19" lean-forward="false" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
               <folding>
-                <element signature="e#17#107#0" expanded="true" />
+                <element signature="e#24#152#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tag_controller.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pkg/rest_api/controllers/tag_controller.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1407">
-              <caret line="44" column="27" lean-forward="true" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
-              <folding>
-                <element signature="e#21#97#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="controllers.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pkg/rest_api/controllers/controllers.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="980">
-              <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stack_controller.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pkg/rest_api/controllers/stack_controller.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-              <folding>
-                <element signature="e#21#86#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stack_overflow.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pkg/datastore/stack_overflow.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="89" column="30" lean-forward="true" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="30" />
-              <folding>
-                <element signature="e#19#80#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stack_overflow.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pkg/models/stack_overflow.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="764">
-              <caret line="62" column="27" lean-forward="false" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="types.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pkg/datastore/types.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="26" column="27" lean-forward="false" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6c0380ad-5fdb-41d5-a7d7-3ceb0a734fd9/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="25" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -201,10 +111,8 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/6c0380ad-5fdb-41d5-a7d7-3ceb0a734fd9/console_1.sql" />
         <option value="$PROJECT_DIR$/pkg/services/service_locator/service_locator.go" />
         <option value="$PROJECT_DIR$/pkg/services/logging.go" />
-        <option value="$PROJECT_DIR$/pkg/services/classificators/stack_rules.go" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/6c0380ad-5fdb-41d5-a7d7-3ceb0a734fd9/console_2.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/6c0380ad-5fdb-41d5-a7d7-3ceb0a734fd9/console_3.sql" />
-        <option value="$PROJECT_DIR$/pkg/services/classificators/stack_classificator.go" />
         <option value="$PROJECT_DIR$/pkg/services/fetchers/stack_fetcher.go" />
         <option value="$PROJECT_DIR$/pkg/rest_api/routers/authentication.go" />
         <option value="$PROJECT_DIR$/main.go" />
@@ -223,8 +131,11 @@
         <option value="$PROJECT_DIR$/pkg/rest_api/controllers/stack_controller.go" />
         <option value="$PROJECT_DIR$/pkg/models/stack_overflow.go" />
         <option value="$PROJECT_DIR$/pkg/datastore/types.go" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/6c0380ad-5fdb-41d5-a7d7-3ceb0a734fd9/console.sql" />
         <option value="$PROJECT_DIR$/pkg/datastore/stack_overflow.go" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/6c0380ad-5fdb-41d5-a7d7-3ceb0a734fd9/console.sql" />
+        <option value="$PROJECT_DIR$/pkg/services/classificators/stack_rules.go" />
+        <option value="$PROJECT_DIR$/pkg/services/classificators/stack_classificator.go" />
+        <option value="$PROJECT_DIR$/classificator.json" />
       </list>
     </option>
   </component>
@@ -298,6 +209,26 @@
               <item name="pkg" type="462c0819:PsiDirectoryNode" />
               <item name="rest_api" type="462c0819:PsiDirectoryNode" />
               <item name="routers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="observer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="observer" type="462c0819:PsiDirectoryNode" />
+              <item name="pkg" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="observer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="observer" type="462c0819:PsiDirectoryNode" />
+              <item name="pkg" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="classificators" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="observer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="observer" type="462c0819:PsiDirectoryNode" />
+              <item name="pkg" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="fetchers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -447,7 +378,7 @@
       <option name="presentableId" value="Default" />
       <updated>1515160074037</updated>
       <workItem from="1515160077833" duration="46000" />
-      <workItem from="1515160314109" duration="19147000" />
+      <workItem from="1515160314109" duration="28394000" />
     </task>
     <task id="LOCAL-00001" summary="Сборщик вопросов со StackOverflow">
       <created>1515178311220</created>
@@ -477,11 +408,25 @@
       <option name="project" value="LOCAL" />
       <updated>1515183781839</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Поправил небольшие ошибки">
+      <created>1515185547189</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1515185547189</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Поправил небольшие ошибки">
+      <created>1515211348195</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1515211348195</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19193000" />
+    <option name="totallyTimeSpent" value="28440000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="3866" height="2106" extended-state="6" />
@@ -508,7 +453,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3998915" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2544764" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -529,13 +474,27 @@
     <MESSAGE value="REST API" />
     <MESSAGE value="Docker support" />
     <MESSAGE value="Добавил поддержку тегов" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил поддержку тегов" />
+    <MESSAGE value="Поправил небольшие ошибки" />
+    <option name="LAST_COMMIT_MESSAGE" value="Поправил небольшие ошибки" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="8" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="GoApplicationRunConfiguration">
+        <watch expression="rules" language="go" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>rules</expression-string>
+        <language-id>go</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.go">
@@ -584,14 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/services/classificators/stack_rules.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pkg/services/logging.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -625,36 +576,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="30" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/services/classificators/stack_classificator.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="82" column="20" lean-forward="false" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
-          <folding>
-            <element signature="e#24#116#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/services/settings.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <element signature="e#18#188#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/services/fetchers/stack_fetcher.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#18#383#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -764,14 +685,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/datastore/init.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="23" column="64" lean-forward="false" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pkg/models/tags.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -811,16 +724,8 @@
         <state relative-caret-position="735">
           <caret line="21" column="54" lean-forward="false" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
           <folding>
-            <element signature="e#17#107#0" expanded="true" />
+            <element signature="e#17#107#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/rest_api/controllers/controllers.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="980">
-          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -829,17 +734,7 @@
         <state relative-caret-position="1407">
           <caret line="44" column="27" lean-forward="true" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
           <folding>
-            <element signature="e#21#97#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/rest_api/controllers/stack_controller.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-          <folding>
-            <element signature="e#21#86#0" expanded="true" />
+            <element signature="e#21#97#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -852,14 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6c0380ad-5fdb-41d5-a7d7-3ceb0a734fd9/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pkg/models/stack_overflow.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="764">
@@ -868,13 +755,97 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/rest_api/controllers/stack_controller.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+          <folding>
+            <element signature="e#21#86#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pkg/datastore/stack_overflow.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="89" column="30" lean-forward="true" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="30" />
+        <state relative-caret-position="698">
+          <caret line="23" column="47" lean-forward="false" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
           <folding>
-            <element signature="e#19#80#0" expanded="true" />
+            <element signature="e#19#80#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6c0380ad-5fdb-41d5-a7d7-3ceb0a734fd9/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="14" column="15" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="14" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/rest_api/controllers/controllers.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="980">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/datastore/init.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="23" column="64" lean-forward="false" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/services/settings.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/services/fetchers/stack_fetcher.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/scoop/apps/go/current/src/encoding/json/decode.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="95" column="5" lean-forward="false" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/services/classificators/stack_rules.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/services/classificators/stack_classificator.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2940">
+          <caret line="84" column="19" lean-forward="false" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
+          <folding>
+            <element signature="e#24#152#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classificator.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1379">
+          <caret line="271" column="93" lean-forward="true" selection-start-line="271" selection-start-column="93" selection-end-line="271" selection-end-column="93" />
+          <folding />
         </state>
       </provider>
     </entry>

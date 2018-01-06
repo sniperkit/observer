@@ -6,6 +6,7 @@ import (
 	"os"
 	"io/ioutil"
 	"encoding/json"
+	"strings"
 )
 
 type FirstLevelRule struct {
@@ -65,6 +66,17 @@ func containTag(q models.SOQuestion, tag string) (bool) {
 	return false
 }
 
+// check tag existence in the questions by slice of tags
+func containAnyOfTags(q models.SOQuestion, tags []string) (bool) {
+
+	for _, tag := range tags {
+		if containTag(q, tag) {
+			return true
+		}
+	}
+	return false
+}
+
 // Check stop tag existance in the question
 func containStopTag(q models.SOQuestion) (bool, string) {
 
@@ -82,8 +94,11 @@ func firstLevelClassification(q models.SOQuestion, site string) (string) {
 		if site == flr.Site {
 			if flr.Include == "*" {
 				return flr.Result
-			} else if containTag(q, flr.Include) {
-				return flr.Result
+			} else {
+				ruleTags := strings.Split(flr.Include, ",")
+				if containAnyOfTags(q, ruleTags) {
+					return flr.Result
+				}
 			}
 		}
 	}

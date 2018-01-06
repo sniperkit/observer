@@ -27,7 +27,7 @@ type StackClassificatorRules struct {
 	SecondLevelRules []SecondLevelRule `json:"second_level_rules"`
 }
 
-const rulesFileName = "classificator.json"
+const rulesFileName = "./classificator.json"
 
 var rules StackClassificatorRules
 var log = services.GetLogger("classificator")
@@ -37,7 +37,12 @@ func init() {
 	jsonFile, err := os.Open(rulesFileName)
 	if err != nil {
 		log.Error(err.Error())
-		panic(err)
+
+		jsonFile, err = os.Open("/go/bin/classificator.json")
+		if err != nil {
+			log.Error(err.Error())
+			panic(err)
+		}
 	}
 	defer jsonFile.Close()
 

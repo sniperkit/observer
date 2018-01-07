@@ -9,9 +9,15 @@ import (
 	"strings"
 )
 
+type TagSet struct {
+	Name string `json:"name"`
+	Tags string `json:"tags"`
+}
+
 type FirstLevelRule struct {
 	Site string `json:"site"`
 	Include string `json:"include"`
+	TagSet string `json:"tag_set"`
 	Result string `json:"result"`
 }
 
@@ -24,6 +30,7 @@ type SecondLevelRule struct {
 
 type StackClassificatorRules struct {
 	StopTags []string `json:"stop_tags"`
+	TagSets []TagSet `json:"tag_sets"`
 	FirstLevelRules []FirstLevelRule `json:"first_level_rules"`
 	SecondLevelRules []SecondLevelRule `json:"second_level_rules"`
 }
@@ -88,6 +95,18 @@ func containStopTag(q models.SOQuestion) (bool, string) {
 	return false, ""
 }
 
+func findTagSetTags(name string) string {
+
+	for _, tagSet := range rules.TagSets {
+
+		if tagSet.Name == name {
+			return tagSet.Tags
+		}
+	}
+
+	return ""
+}
+
 func firstLevelClassification(q models.SOQuestion, site string) (string) {
 
 	for _, flr := range rules.FirstLevelRules {
@@ -95,9 +114,18 @@ func firstLevelClassification(q models.SOQuestion, site string) (string) {
 			if flr.Include == "*" {
 				return flr.Result
 			} else {
-				ruleTags := strings.Split(flr.Include, ",")
-				if containAnyOfTags(q, ruleTags) {
-					return flr.Result
+				// если правило задано через include (эта ветка скоро умрет)
+				if flr.TagSet == "" {
+					ruleTags := strings.Split(flr.Include, ",")
+					if containAnyOfTags(q, ruleTags) {
+						return flr.Result
+					}
+				// если правило задано через TagSet
+				} else {
+					tagSetTags := strings.Split(findTagSetTags(flr.TagSet), ",")
+					if containAnyOfTags(q, tagSetTags) {
+						return flr.Result
+					}
 				}
 			}
 		}

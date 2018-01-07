@@ -7,7 +7,7 @@
     "tkinter", "wildfly-9",
     "twilio", "tfs", "tfs2017", "jquery", "struts2", "kendo-ui", "vue.js", "vuejs2", "sharepoint", "vbscript", "dynamics-crm",
     "sap", "highcharts", "three.js", "d3.js", "ember.js", "vba", "sharepoint-2010", "vb.net", "amazon-web-services", "excel",
-    "devexpress",
+    "devexpress", "c", "matlab",
     "datagridview", "crystal-reports", "google-apps-script", "charts.js", "carousel", "firebase-cloud-messaging", "word",
     "cloudkit", "facebook-graph-api", "amazon-web-services", "gruntjs", "regex", "handlebars.js", "google-apps-script",
     "laravel-5.1", "openwrt", "identityserver3", "wildfly", "nhibernate", "apache-cayenne", "opencv", "alexa", "jq",
@@ -43,7 +43,10 @@
     "ckeditor", "accordion", "masonry", "shopify", "google-drive-sdk", "whatsapp", "slick.js", "tinymce", "skulpt", "ormlite-servicestack",
     "postgis", "pgadmin-4", "pgadmin", "eclipselink", "oozie", "ibm-bluemix", "битрикс", "jsp"],
   "tag_sets": [
-    { "name": ".net", "tags": "c#,.net,xaml" }
+    { "name": ".net", "tags": "c#,.net,xaml,uwp,asp.net-core" },
+    { "name": "web", "tags": "twitter-bootstrap,svg,css,html5" },
+    { "name": "bigdata", "tags": "elasticsearch,cassandra,apache-kafka,apache-spark,hadoop,rabbitmq,redis" },
+    { "name": "linux", "tags": "linux,grep,arch-linux,sed,systemd,ubuntu,centos7,centos,debian,opensuse,rhel,ssh" }
   ],
   "first_level_rules": [
     { "site": "ru.stackoverflow", "include": "*", "tag_set": "", "result": "russian"},
@@ -51,7 +54,7 @@
     { "site": "codereview", "include": "*", "tag_set": "","result": "code review"},
     { "site": "softwareengineering", "include": "unit-testing", "tag_set": "","result": "unit-testing"},
     { "site": "softwareengineering", "include": "design", "tag_set": "","result": "software-desing"},
-    { "site": "stackoverflow", "include": "elasticsearch,cassandra,apache-kafka,apache-spark,hadoop,rabbitmq", "tag_set": "","result": "bigdata"},
+    { "site": "stackoverflow", "include": "", "tag_set": "bigdata","result": "bigdata"},
     { "site": "stackoverflow", "include": "iis,nginx,virtualbox,git,ansible,docker", "tag_set": "","result": "devops"},
     { "site": "stackoverflow", "include": "unit-testing", "tag_set": "","result": "unit-testing"},
     { "site": "stackoverflow", "include": "machine-learning,tensorflow", "tag_set": "","result": "machine-learning"},
@@ -71,8 +74,7 @@
     { "site": "stackoverflow", "include": "xamarin.forms", "tag_set": "","result": "xamarin"},
     { "site": "stackoverflow", "include": "xamarin.ios", "tag_set": "","result": "xamarin"},
     { "site": "stackoverflow", "include": "", "tag_set": ".net","result": ".net"},
-    { "site": "stackoverflow", "include": "svg", "tag_set": "","result": "web"},
-    { "site": "stackoverflow", "include": "twitter-bootstrap", "tag_set": "","result": "web"},
+    { "site": "stackoverflow", "include": "", "tag_set": "web","result": "web"},
     { "site": "stackoverflow", "include": "android", "tag_set": "","result": "android"},
     { "site": "stackoverflow", "include": "gulp,mocha,chai,reactjs", "tag_set": "","result": "js"},
     { "site": "stackoverflow", "include": "webpack","tag_set": "", "result": "js"},
@@ -93,7 +95,7 @@
     { "site": "stackoverflow", "include": "ios,swift", "tag_set": "","result": "ios"},
     { "site": "stackoverflow", "include": "algorithm, algorithms,encryption", "tag_set": "","result": "algorithm"},
     { "site": "stackoverflow", "include": "intellij-idea", "tag_set": "","result": "idea"},
-    { "site": "stackoverflow", "include": "linux,arch-linux", "tag_set": "","result": "linux"},
+    { "site": "stackoverflow", "include": "", "tag_set": "linux","result": "linux"},
     { "site": "stackoverflow", "include": "wireshark", "tag_set": "","result": "networking"},
     { "site": "stackoverflow", "include": "oop", "tag_set": "", "result": "software-design"}
   ],
@@ -111,6 +113,7 @@
     { "site": "stackoverflow", "first":"bigdata", "include": "elasticsearch", "result": "elasticsearch"},
     { "site": "stackoverflow", "first":"bigdata", "include": "apache-kafka", "result": "kafka"},
     { "site": "stackoverflow", "first":"bigdata", "include": "rabbitmq", "result": "rabbitmq"},
+    { "site": "stackoverflow", "first":"bigdata", "include": "redis", "result": "redis"},
     { "site": "stackoverflow", "first":"bigdata", "include": "hadoop", "result": "hadoop"},
     { "site": "stackoverflow", "first":"bigdata", "include": "apache-spark", "result": "spark"},
     { "site": "stackoverflow", "first":"bigdata", "include": "cassandra", "result": "cassandra"},

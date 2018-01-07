@@ -13,7 +13,7 @@
     "laravel-5.1", "openwrt", "identityserver3", "wildfly", "nhibernate", "apache-cayenne", "opencv", "alexa", "jq",
     "playframework", "codenvy", "botframework", "mobx", "eclipse", "transpose", "phantomjs", "ruby-on-rails", "flask", "ibm-mq",
     "docplexcloud", "underscore.js", "youtube-iframe-api", "actionscript-3", "gis", "openlayers", "devextreme", "google-maps",
-    "js-pdf", ".htaccess"
+    "js-pdf", ".htaccess",
     "google-maps-api-3", "parse.com", "react-native", "woocommerce", "amazon-s3", "jhipster", "chart.js", "openerp",
     "primeng", "nativescript", "ckeditor4.x", "pentaho", "postman", "mondrian", "instagram", "jspdf", "socialshare",
     "markojs", "jrecorder",

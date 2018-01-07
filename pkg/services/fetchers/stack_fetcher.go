@@ -30,8 +30,7 @@ func init() {
 }
 
 // TODO: где то в настройках должно быть
-var soSites = [8]string{"stackoverflow", "security", "codereview", "softwareengineering", "ru.stackoverflow", "superuser",
-	"unix", "serverfault"}
+var soSites = [5]string{"stackoverflow", "security", "codereview", "softwareengineering", "ru.stackoverflow"}
 
 const maxSOPages = 50
 const soBaseUrl = "https://api.stackexchange.com/2.2/questions?page=%d&pagesize=100&fromdate=%d&order=asc&sort=creation&site=%s%s"

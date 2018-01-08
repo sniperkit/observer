@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed303021-b36a-4438-8e14-e7c938a62604" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/classificator.json" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6c0380ad-5fdb-41d5-a7d7-3ceb0a734fd9.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/6c0380ad-5fdb-41d5-a7d7-3ceb0a734fd9.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6c0380ad-5fdb-41d5-a7d7-3ceb0a734fd9/storage_v2/_src_/database/rss.UroBAA/schema/public.abK9xQ.meta" afterPath="$PROJECT_DIR$/.idea/dataSources/6c0380ad-5fdb-41d5-a7d7-3ceb0a734fd9/storage_v2/_src_/database/rss.UroBAA/schema/public.abK9xQ.meta" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/pkg/services/classificators/stack_classificator.go" afterPath="$PROJECT_DIR$/pkg/services/classificators/stack_classificator.go" />
-      <change beforePath="$PROJECT_DIR$/pkg/services/classificators/stack_rules.go" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/pkg/datastore/stack_overflow.go" afterPath="$PROJECT_DIR$/pkg/datastore/stack_overflow.go" />
+      <change beforePath="$PROJECT_DIR$/pkg/datastore/types.go" afterPath="$PROJECT_DIR$/pkg/datastore/types.go" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,16 +56,95 @@
         <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="rss@192.168.1.71" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="rss: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="stack_tags: table" type="a93d6ac6:PostgresImplModel$LocalTable" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="classificator.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="classificator.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classificator.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1379">
-              <caret line="271" column="93" lean-forward="true" selection-start-line="271" selection-start-column="93" selection-end-line="271" selection-end-column="93" />
+            <state relative-caret-position="513">
+              <caret line="34" column="75" lean-forward="true" selection-start-line="34" selection-start-column="75" selection-end-line="34" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6c0380ad-5fdb-41d5-a7d7-3ceb0a734fd9/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="883">
+              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tags.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pkg/datastore/tags.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="3" column="42" lean-forward="false" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stack_fetcher.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pkg/services/fetchers/stack_fetcher.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="102" column="25" lean-forward="false" selection-start-line="102" selection-start-column="25" selection-end-line="102" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stack_overflow.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pkg/datastore/stack_overflow.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1512">
+              <caret line="126" column="69" lean-forward="false" selection-start-line="126" selection-start-column="69" selection-end-line="126" selection-end-column="69" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logging.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pkg/services/logging.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="types.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pkg/datastore/types.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pkg/services/settings.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -73,11 +153,21 @@
       <file leaf-file-name="stack_classificator.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pkg/services/classificators/stack_classificator.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2940">
-              <caret line="84" column="19" lean-forward="false" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
+            <state relative-caret-position="1190">
+              <caret line="127" column="21" lean-forward="true" selection-start-line="127" selection-start-column="21" selection-end-line="127" selection-end-column="21" />
               <folding>
-                <element signature="e#24#152#0" expanded="true" />
+                <element signature="e#24#163#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="docker-compose.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="385">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -90,6 +180,21 @@
         <option value="Go File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ruby</find>
+      <find>angular</find>
+      <find>boot</find>
+      <find>spring</find>
+      <find>alg</find>
+      <find>idea</find>
+      <find>xaml</find>
+      <find>nginx</find>
+      <find>linux</find>
+      <find>delp</find>
+      <find>ass</find>
+    </findStrings>
   </component>
   <component name="GOROOT" path="$USER_HOME$/scoop/apps/go/current" />
   <component name="Git.Settings">
@@ -113,16 +218,12 @@
         <option value="$PROJECT_DIR$/pkg/services/logging.go" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/6c0380ad-5fdb-41d5-a7d7-3ceb0a734fd9/console_2.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/6c0380ad-5fdb-41d5-a7d7-3ceb0a734fd9/console_3.sql" />
-        <option value="$PROJECT_DIR$/pkg/services/fetchers/stack_fetcher.go" />
         <option value="$PROJECT_DIR$/pkg/rest_api/routers/authentication.go" />
         <option value="$PROJECT_DIR$/main.go" />
         <option value="$PROJECT_DIR$/pkg/rest_api/rest-api.go" />
         <option value="$PROJECT_DIR$/pkg/rest_api/types.go" />
         <option value="$PROJECT_DIR$/pkg/rest_api/controllers/auth_controller.go" />
-        <option value="$PROJECT_DIR$/Dockerfile" />
-        <option value="$PROJECT_DIR$/docker-compose.yml" />
         <option value="$PROJECT_DIR$/pkg/rest_api/routers/router.go" />
-        <option value="$PROJECT_DIR$/pkg/datastore/init.go" />
         <option value="$PROJECT_DIR$/pkg/models/tags.go" />
         <option value="$PROJECT_DIR$/pkg/datastore/interface.go" />
         <option value="$PROJECT_DIR$/pkg/rest_api/controllers/controllers.go" />
@@ -130,12 +231,17 @@
         <option value="$PROJECT_DIR$/pkg/rest_api/controllers/tag_controller.go" />
         <option value="$PROJECT_DIR$/pkg/rest_api/controllers/stack_controller.go" />
         <option value="$PROJECT_DIR$/pkg/models/stack_overflow.go" />
-        <option value="$PROJECT_DIR$/pkg/datastore/types.go" />
-        <option value="$PROJECT_DIR$/pkg/datastore/stack_overflow.go" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/6c0380ad-5fdb-41d5-a7d7-3ceb0a734fd9/console.sql" />
         <option value="$PROJECT_DIR$/pkg/services/classificators/stack_rules.go" />
+        <option value="$PROJECT_DIR$/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/Dockerfile" />
+        <option value="$PROJECT_DIR$/pkg/datastore/init.go" />
+        <option value="$PROJECT_DIR$/pkg/logging/logging.go" />
         <option value="$PROJECT_DIR$/pkg/services/classificators/stack_classificator.go" />
+        <option value="$PROJECT_DIR$/pkg/services/fetchers/stack_fetcher.go" />
         <option value="$PROJECT_DIR$/classificator.json" />
+        <option value="$PROJECT_DIR$/pkg/datastore/types.go" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/6c0380ad-5fdb-41d5-a7d7-3ceb0a734fd9/console.sql" />
+        <option value="$PROJECT_DIR$/pkg/datastore/stack_overflow.go" />
       </list>
     </option>
   </component>
@@ -183,32 +289,6 @@
               <item name="observer" type="462c0819:PsiDirectoryNode" />
               <item name="pkg" type="462c0819:PsiDirectoryNode" />
               <item name="datastore" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="observer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="observer" type="462c0819:PsiDirectoryNode" />
-              <item name="pkg" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="observer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="observer" type="462c0819:PsiDirectoryNode" />
-              <item name="pkg" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="observer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="observer" type="462c0819:PsiDirectoryNode" />
-              <item name="pkg" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_api" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="observer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="observer" type="462c0819:PsiDirectoryNode" />
-              <item name="pkg" type="462c0819:PsiDirectoryNode" />
-              <item name="rest_api" type="462c0819:PsiDirectoryNode" />
-              <item name="routers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="observer" type="b2602c69:ProjectViewProjectNode" />
@@ -298,6 +378,7 @@
         <env name="USER" value="demas" />
         <env name="PASS" value="root" />
         <env name="PORT" value="4000" />
+        <env name="ELASTICsearch" value="http://192.168.1.71:9200" />
       </envs>
       <kind value="DIRECTORY" />
       <filePath value="$PROJECT_DIR$" />
@@ -378,7 +459,7 @@
       <option name="presentableId" value="Default" />
       <updated>1515160074037</updated>
       <workItem from="1515160077833" duration="46000" />
-      <workItem from="1515160314109" duration="28394000" />
+      <workItem from="1515160314109" duration="54604000" />
     </task>
     <task id="LOCAL-00001" summary="Сборщик вопросов со StackOverflow">
       <created>1515178311220</created>
@@ -422,11 +503,137 @@
       <option name="project" value="LOCAL" />
       <updated>1515211348195</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Перенес правила конфигуратора во внешний json файл">
+      <created>1515237163361</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1515237163361</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Пробросил конфигурационный файл в docker">
+      <created>1515237381876</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1515237381876</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Пробросил конфигурационный файл в docker">
+      <created>1515237829919</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1515237829919</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Пробросил конфигурационный файл в docker">
+      <created>1515237925760</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1515237925760</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Пробросил конфигурационный файл в docker">
+      <created>1515238232962</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1515238232962</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Пробросил конфигурационный файл в docker">
+      <created>1515238304999</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1515238304999</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Пробросил конфигурационный файл в docker">
+      <created>1515238450609</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1515238450609</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Классификатор">
+      <created>1515255000971</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1515255000971</updated>
+    </task>
+    <task id="LOCAL-00015" summary="В классификаторе можно указывать в одном правиле несколько тегов">
+      <created>1515255600806</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1515255600806</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Классификатор">
+      <created>1515267674639</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1515267674639</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Добавил концепцию TagSets в конфигурацию">
+      <created>1515314114810</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1515314114810</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Классификатор">
+      <created>1515314758281</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1515314758281</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Классификатор">
+      <created>1515345127568</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1515345127568</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Классификатор">
+      <created>1515345261212</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1515345261212</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Классификатор">
+      <created>1515348658089</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1515348658089</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Классификатор">
+      <created>1515387986773</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1515387986773</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Классификатор">
+      <created>1515412794470</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1515412794470</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Классификатор">
+      <created>1515419038581</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1515419038581</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28440000" />
+    <option name="totallyTimeSpent" value="54650000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="3866" height="2106" extended-state="6" />
@@ -440,12 +647,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17905588" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25293177" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25159913" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="SQL Generator" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2076226" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -475,7 +682,12 @@
     <MESSAGE value="Docker support" />
     <MESSAGE value="Добавил поддержку тегов" />
     <MESSAGE value="Поправил небольшие ошибки" />
-    <option name="LAST_COMMIT_MESSAGE" value="Поправил небольшие ошибки" />
+    <MESSAGE value="Перенес правила конфигуратора во внешний json файл" />
+    <MESSAGE value="Пробросил конфигурационный файл в docker" />
+    <MESSAGE value="В классификаторе можно указывать в одном правиле несколько тегов" />
+    <MESSAGE value="Добавил концепцию TagSets в конфигурацию" />
+    <MESSAGE value="Классификатор" />
+    <option name="LAST_COMMIT_MESSAGE" value="Классификатор" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -540,16 +752,6 @@
         <state relative-caret-position="3605">
           <caret line="111" column="5" lean-forward="false" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/services/logging.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-          <folding>
-            <element signature="e#18#62#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -669,22 +871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pkg/models/tags.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -706,16 +892,8 @@
         <state relative-caret-position="910">
           <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
           <folding>
-            <element signature="e#19#69#0" expanded="true" />
+            <element signature="e#19#69#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/datastore/tags.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="3" column="42" lean-forward="false" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -739,14 +917,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/datastore/types.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="26" column="27" lean-forward="false" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pkg/models/stack_overflow.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="764">
@@ -755,62 +925,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/rest_api/controllers/stack_controller.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-          <folding>
-            <element signature="e#21#86#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/datastore/stack_overflow.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="698">
-          <caret line="23" column="47" lean-forward="false" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
-          <folding>
-            <element signature="e#19#80#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6c0380ad-5fdb-41d5-a7d7-3ceb0a734fd9/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="14" column="15" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="14" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pkg/rest_api/controllers/controllers.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="980">
           <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/datastore/init.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="23" column="64" lean-forward="false" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/services/settings.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pkg/services/fetchers/stack_fetcher.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -831,20 +949,116 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/rest_api/controllers/stack_controller.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/datastore/init.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/logging/logging.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/services/settings.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/services/logging.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pkg/services/classificators/stack_classificator.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2940">
-          <caret line="84" column="19" lean-forward="false" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
+        <state relative-caret-position="1190">
+          <caret line="127" column="21" lean-forward="true" selection-start-line="127" selection-start-column="21" selection-end-line="127" selection-end-column="21" />
           <folding>
-            <element signature="e#24#152#0" expanded="true" />
+            <element signature="e#24#163#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/services/fetchers/stack_fetcher.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="102" column="25" lean-forward="false" selection-start-line="102" selection-start-column="25" selection-end-line="102" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/classificator.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1379">
-          <caret line="271" column="93" lean-forward="true" selection-start-line="271" selection-start-column="93" selection-end-line="271" selection-end-column="93" />
+        <state relative-caret-position="513">
+          <caret line="34" column="75" lean-forward="true" selection-start-line="34" selection-start-column="75" selection-end-line="34" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/datastore/types.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6c0380ad-5fdb-41d5-a7d7-3ceb0a734fd9/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="883">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/datastore/tags.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="3" column="42" lean-forward="false" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/datastore/stack_overflow.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1512">
+          <caret line="126" column="69" lean-forward="false" selection-start-line="126" selection-start-column="69" selection-end-line="126" selection-end-column="69" />
           <folding />
         </state>
       </provider>

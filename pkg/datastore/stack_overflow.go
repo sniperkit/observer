@@ -5,10 +5,11 @@ import (
 	"strings"
 )
 
+// возвращает непрочитанные теги первого уровня
 func (ds *DataStore) GetStackTags() []models.StackTag {
 
 	result := []models.StackTag{}
-	db.Where("unreaded > 0 and hidden = 0").Find(&result)
+	db.Where("unreaded > 0 and hidden = 0 and details = ''").Find(&result)
 	return result
 }
 
@@ -47,6 +48,7 @@ func (ds *DataStore) InsertStackOverflowQuestions(questionsMap map[string][]mode
 	for site, questions  := range questionsMap {
 		for _, question := range questions {
 
+			// сохраняем вопрос
 			dbQuestion := StackQuestion{}
 			dbQuestion.Title = question.Title
 			dbQuestion.Link = question.Link
@@ -66,12 +68,11 @@ func (ds *DataStore) InsertStackOverflowQuestions(questionsMap map[string][]mode
 			dbQuestion.Favorite = 0
 			dbQuestion.Classified = 1
 			dbQuestion.Site = site
-
 			db.Save(&dbQuestion)
 
+			// обновляем тег первого уровня
 			stackTag := StackTag{}
-			db.Where("classification = ?", dbQuestion.Classification).First(&stackTag)
-
+			db.Where("classification = ? and details = ''", dbQuestion.Classification).First(&stackTag)
 			if stackTag.ID == 0 {
 				stackTag.Classification = dbQuestion.Classification
 				stackTag.Hidden = 0
@@ -79,7 +80,19 @@ func (ds *DataStore) InsertStackOverflowQuestions(questionsMap map[string][]mode
 			} else {
 				stackTag.Unreaded += 1
 			}
+			db.Save(&stackTag)
 
+			// обновляем тег второго уровня
+			stackTag = StackTag{}
+			db.Where("classification = ? and details = ?", dbQuestion.Classification, dbQuestion.Details).First(&stackTag)
+			if stackTag.ID == 0 {
+				stackTag.Classification = dbQuestion.Classification
+				stackTag.Details = dbQuestion.Details
+				stackTag.Hidden = 0
+				stackTag.Unreaded = 1
+			} else {
+				stackTag.Unreaded += 1
+			}
 			db.Save(&stackTag)
 		}
 	}
@@ -93,7 +106,12 @@ func (ds *DataStore) SetStackQuestionAsReaded(question_id int) {
 	db.Save(&question)
 
 	stackTag := StackTag{}
-	db.Where("classification = ?", question.Classification).First(&stackTag)
+	db.Where("classification = ? and details = ''", question.Classification).First(&stackTag)
+	stackTag.Unreaded -= 1
+	db.Save(&stackTag)
+
+	stackTag = StackTag{}
+	db.Where("classification = ? and details = ?", question.Classification, question.Details).First(&stackTag)
 	stackTag.Unreaded -= 1
 	db.Save(&stackTag)
 }
@@ -101,22 +119,10 @@ func (ds *DataStore) SetStackQuestionAsReaded(question_id int) {
 func (ds *DataStore) SetStackQuestionsAsReadedByClassification(classification string) {
 
 	db.Model(StackQuestion{}).Where("classification = ?", classification).UpdateColumn("readed", 1)
-	stackTag := StackTag{}
-	db.Where("classification = ?", classification).First(&stackTag)
-	stackTag.Unreaded = 0
-	db.Save(&stackTag)
+	db.Model(StackTag{}).Where("classification = ?", classification).UpdateColumn("unreaded", 0)
 }
 
 func (ds *DataStore) SetStackQuestionsAsReadedByClassificationFromTime(classification string, t int64) {
 
-	var count int
-
-	db.Model(&StackQuestion{}).Where("classification = ? and creationdate < ?", classification, t).Count(&count)
-	db.Model(StackQuestion{}).Where("classification = ? and creationdate < ?", classification, t).
-		UpdateColumn("readed", 1)
-
-	stackTag := StackTag{}
-	db.Where("classification = ?", classification).First(&stackTag)
-	stackTag.Unreaded -= count
-	db.Save(&stackTag)
+	// эту операцию имеет смысл делать только при выбранных 2-х тегах
 }

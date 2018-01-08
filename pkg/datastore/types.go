@@ -15,6 +15,7 @@ type StackTag struct {
 	gorm.Model
 
 	Classification string `gorm:"size:40"`
+	Details string `gorm:"size:40"`
 	Unreaded       int
 	Hidden         int
 }

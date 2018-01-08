@@ -3,7 +3,6 @@ package datastore
 import (
 	"github.com/demas/observer/pkg/models"
 	"strings"
-	"golang.org/x/tools/go/gcimporter15/testdata"
 )
 
 // возвращает непрочитанные теги первого уровня
@@ -25,7 +24,7 @@ func (ds *DataStore) GetSecondTagByClassification(classification string) interfa
 	result := []Result{}
 	db.Model(StackTag{}).
 		Select("details, unreaded as count").
-			Where("classification = ? and details != '' and unreaded > 0", classification).Scan(&result)
+			Where("classification = ? and details != '' and hidden = 0 and unreaded > 0", classification).Scan(&result)
 
 	return result
 }

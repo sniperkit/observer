@@ -3,6 +3,7 @@ package datastore
 import (
 	"github.com/demas/observer/pkg/models"
 	"strings"
+	"golang.org/x/tools/go/gcimporter15/testdata"
 )
 
 // возвращает непрочитанные теги первого уровня
@@ -15,14 +16,17 @@ func (ds *DataStore) GetStackTags() []models.StackTag {
 
 func (ds *DataStore) GetSecondTagByClassification(classification string) interface{} {
 
+	// TODO: от этой структуры можно избавиться и просто возвращать коллекцию тегов
 	type Result struct {
 		Details string `json:"details"`
 		Count   int    `json:"count"`
 	}
 
 	result := []Result{}
-	db.Table("stack_questions").Select("details, count(id) as count").
-		Where("classification = ? and readed= 0", classification).Group("details").Scan(&result)
+	db.Model(StackTag{}).
+		Select("details, unreaded as count").
+			Where("classification = ? and details != '' and unreaded > 0", classification).Scan(&result)
+
 	return result
 }
 
@@ -48,6 +52,8 @@ func (ds *DataStore) InsertStackOverflowQuestions(questionsMap map[string][]mode
 	for site, questions  := range questionsMap {
 		for _, question := range questions {
 
+			tx := db.Begin()
+
 			// сохраняем вопрос
 			dbQuestion := StackQuestion{}
 			dbQuestion.Title = question.Title
@@ -68,11 +74,11 @@ func (ds *DataStore) InsertStackOverflowQuestions(questionsMap map[string][]mode
 			dbQuestion.Favorite = 0
 			dbQuestion.Classified = 1
 			dbQuestion.Site = site
-			db.Save(&dbQuestion)
+			tx.Save(&dbQuestion)
 
 			// обновляем тег первого уровня
 			stackTag := StackTag{}
-			db.Where("classification = ? and details = ''", dbQuestion.Classification).First(&stackTag)
+			tx.Where("classification = ? and details = ''", dbQuestion.Classification).First(&stackTag)
 			if stackTag.ID == 0 {
 				stackTag.Classification = dbQuestion.Classification
 				stackTag.Hidden = 0
@@ -80,11 +86,11 @@ func (ds *DataStore) InsertStackOverflowQuestions(questionsMap map[string][]mode
 			} else {
 				stackTag.Unreaded += 1
 			}
-			db.Save(&stackTag)
+			tx.Save(&stackTag)
 
 			// обновляем тег второго уровня
 			stackTag = StackTag{}
-			db.Where("classification = ? and details = ?", dbQuestion.Classification, dbQuestion.Details).First(&stackTag)
+			tx.Where("classification = ? and details = ?", dbQuestion.Classification, dbQuestion.Details).First(&stackTag)
 			if stackTag.ID == 0 {
 				stackTag.Classification = dbQuestion.Classification
 				stackTag.Details = dbQuestion.Details
@@ -93,33 +99,41 @@ func (ds *DataStore) InsertStackOverflowQuestions(questionsMap map[string][]mode
 			} else {
 				stackTag.Unreaded += 1
 			}
-			db.Save(&stackTag)
+			tx.Save(&stackTag)
+
+			tx.Commit()
 		}
 	}
 }
 
 func (ds *DataStore) SetStackQuestionAsReaded(question_id int) {
 
+	tx := db.Begin()
+
 	var question StackQuestion
-	db.Model(StackQuestion{}).Where("question_id = ?", question_id).First(&question)
+	tx.Model(StackQuestion{}).Where("question_id = ?", question_id).First(&question)
 	question.Readed = 1
-	db.Save(&question)
+	tx.Save(&question)
 
 	stackTag := StackTag{}
-	db.Where("classification = ? and details = ''", question.Classification).First(&stackTag)
+	tx.Where("classification = ? and details = ''", question.Classification).First(&stackTag)
 	stackTag.Unreaded -= 1
-	db.Save(&stackTag)
+	tx.Save(&stackTag)
 
 	stackTag = StackTag{}
-	db.Where("classification = ? and details = ?", question.Classification, question.Details).First(&stackTag)
+	tx.Where("classification = ? and details = ?", question.Classification, question.Details).First(&stackTag)
 	stackTag.Unreaded -= 1
-	db.Save(&stackTag)
+	tx.Save(&stackTag)
+
+	tx.Commit()
 }
 
 func (ds *DataStore) SetStackQuestionsAsReadedByClassification(classification string) {
 
-	db.Model(StackQuestion{}).Where("classification = ?", classification).UpdateColumn("readed", 1)
-	db.Model(StackTag{}).Where("classification = ?", classification).UpdateColumn("unreaded", 0)
+	tx := db.Begin()
+	tx.Model(StackQuestion{}).Where("classification = ?", classification).UpdateColumn("readed", 1)
+	tx.Model(StackTag{}).Where("classification = ?", classification).UpdateColumn("unreaded", 0)
+	tx.Commit()
 }
 
 func (ds *DataStore) SetStackQuestionsAsReadedByClassificationFromTime(classification string, t int64) {

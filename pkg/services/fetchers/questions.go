@@ -2,7 +2,6 @@ package fetchers
 
 import (
 	"fmt"
-	"strconv"
 	"time"
 
 	"os"
@@ -15,6 +14,7 @@ import (
 	"github.com/demas/observer/pkg/models"
 	"github.com/demas/observer/pkg/datastore"
 	"github.com/demas/observer/pkg/services/service_locator"
+	"strconv"
 )
 
 type IStackFetcher interface {
@@ -34,6 +34,7 @@ var soSites = [5]string{"stackoverflow", "security", "codereview", "softwareengi
 
 const maxSOPages = 50
 const soBaseUrl = "https://api.stackexchange.com/2.2/questions?page=%d&pagesize=100&fromdate=%d&order=asc&sort=creation&site=%s%s"
+const soRatingUrl = "https://api.stackexchange.com/2.2/questions/%s?page=1&pagesize=50&order=desc&sort=activity&site=%s%s"
 const soKeyEnvVariable = "SOKEY"
 
 var log = services.GetLogger("main")
@@ -104,6 +105,7 @@ func fetchQuestions() {
 	services.SetLastStackSyncTime(currentTime)
 }
 
+
 func (f *StackFetcher) Fetch() {
 	fmt.Println("Fetch stack questions ...")
 
@@ -118,4 +120,5 @@ func (f *StackFetcher) Fetch() {
 	}
 
 	go common.DoEvery(time.Minute * time.Duration(syncInterval), fetchQuestions)
+	go common.DoEvery(time.Hour * 1, fetchRating)
 }

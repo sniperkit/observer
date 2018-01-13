@@ -13,9 +13,11 @@ type IDataStore interface {
 	// StackOverflow
 	GetStackTags() []models.StackTag
 	GetSecondTagByClassification(classification string) interface{}
-	GetStackQuestionsByClassification(classification string) []models.StackQuestion
+	GetStackQuestionsForRating() []models.StackQuestion
+	GetStackQuestionsByClassification(classification string, limit int) []models.StackQuestion
 	GetStackQuestionsByClassificationAndDetails(classification string, details string) []models.StackQuestion
 	InsertStackOverflowQuestions(questions map[string][]models.SOQuestion)
+	UpdateStackQuestionRating(id uint32, score int)
 	SetStackQuestionAsReaded(question_id int)
 	SetStackQuestionsAsReadedByClassification(classification string)
 	SetStackQuestionsAsReadedByClassificationFromTime(classification string, t int64)

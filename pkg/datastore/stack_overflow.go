@@ -29,11 +29,22 @@ func (ds *DataStore) GetSecondTagByClassification(classification string) interfa
 	return result
 }
 
-func (ds *DataStore) GetStackQuestionsByClassification(classification string) []models.StackQuestion {
+func (ds *DataStore) GetStackQuestionsByClassification(classification string, limit int) []models.StackQuestion {
 
 	result := []models.StackQuestion{}
 	db.Model(StackQuestion{}).
-		Where("classification = ? and readed = 0", classification).Order("score desc").Limit(15).Find(&result)
+		Where("classification = ? and readed = 0", classification).Order("score desc").Limit(limit).Find(&result)
+
+	return result
+}
+
+func (ds *DataStore) GetStackQuestionsForRating() []models.StackQuestion {
+
+	result := []models.StackQuestion{}
+
+	db.Table("stack_questions").
+		Joins("join stack_tags on stack_questions.classification = stack_tags.classification and stack_questions.details = stack_tags.details").
+			Where("stack_questions.readed = 0 and stack_tags.hidden = 0").Scan(&result)
 
 	return result
 }
@@ -103,6 +114,14 @@ func (ds *DataStore) InsertStackOverflowQuestions(questionsMap map[string][]mode
 			tx.Commit()
 		}
 	}
+}
+
+func (ds *DataStore) UpdateStackQuestionRating(id uint32, score int) {
+
+	var question StackQuestion
+	db.Model(StackQuestion{}).Where("question_id = ?", id).First(&question)
+	question.Score = score
+	db.Save(&question)
 }
 
 func (ds *DataStore) SetStackQuestionAsReaded(question_id int) {

@@ -18,7 +18,7 @@ func GetSecondTagsByClassification(w http.ResponseWriter, r *http.Request) (inte
 
 func GetStackQuestionsByClassification(w http.ResponseWriter, r *http.Request) (interface{}, error) {
 
-	return ds.GetStackQuestionsByClassification(mux.Vars(r)["classification"]), nil
+	return ds.GetStackQuestionsByClassification(mux.Vars(r)["classification"], 15), nil
 }
 
 func GetStackQuestionsByClassificationAndDetails(w http.ResponseWriter, r *http.Request) (interface{}, error) {

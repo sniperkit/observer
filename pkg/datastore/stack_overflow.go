@@ -24,8 +24,7 @@ func (ds *DataStore) GetSecondTagByClassification(classification string) interfa
 	result := []Result{}
 	db.Model(StackTag{}).
 		Select("details, unreaded as count").
-			Where("classification = ? and details != '' and hidden = 0 and unreaded > 0", classification).
-				Limit(15).Scan(&result)
+			Where("classification = ? and details != '' and hidden = 0 and unreaded > 0", classification).Scan(&result)
 
 	return result
 }
@@ -34,7 +33,7 @@ func (ds *DataStore) GetStackQuestionsByClassification(classification string) []
 
 	result := []models.StackQuestion{}
 	db.Model(StackQuestion{}).
-		Where("classification = ? and readed = 0", classification).Order("score desc").Find(&result)
+		Where("classification = ? and readed = 0", classification).Order("score desc").Limit(15).Find(&result)
 
 	return result
 }

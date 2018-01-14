@@ -119,9 +119,25 @@ func (ds *DataStore) InsertStackOverflowQuestions(questionsMap map[string][]mode
 func (ds *DataStore) UpdateStackQuestionRating(id uint32, score int) {
 
 	var question StackQuestion
-	db.Model(StackQuestion{}).Where("question_id = ?", id).First(&question)
+	tx := db.Begin()
+	tx.Model(StackQuestion{}).Where("question_id = ?", id).First(&question)
 	question.Score = score
-	db.Save(&question)
+	if score < 0 {
+
+		stackTag := StackTag{}
+		tx.Where("classification = ? and details = ''", question.Classification).First(&stackTag)
+		stackTag.Unreaded -= 1
+		tx.Save(&stackTag)
+
+		stackTag = StackTag{}
+		tx.Where("classification = ? and details = ?", question.Classification, question.Details).First(&stackTag)
+		stackTag.Unreaded -= 1
+		tx.Save(&stackTag)
+
+		question.Readed = 1
+	}
+	tx.Save(&question)
+	tx.Commit()
 }
 
 func (ds *DataStore) SetStackQuestionAsReaded(question_id int) {

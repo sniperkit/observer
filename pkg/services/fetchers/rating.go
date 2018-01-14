@@ -68,7 +68,7 @@ func fetchRating() {
 	// разбиваем запросы на партии и передаем на обработку
 	for site, ids := range siteToQuestions {
 
-		chunkSize := 99
+		chunkSize := 49
 		var chunk []uint32
 		for len(ids) >= chunkSize {
 			chunk, ids = ids[:chunkSize], ids[chunkSize:]

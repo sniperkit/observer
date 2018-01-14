@@ -265,6 +265,7 @@
     { "site": "stackoverflow", "first":"linux", "include": "cron", "result": "cron"},
     { "site": "stackoverflow", "first":"linux", "include": "curl", "result": "curl"},
     { "site": "stackoverflow", "first":"linux", "include": "scripting", "result": "scripting"},
+    { "site": "stackoverflow", "first":"algorithm", "include": "cryptography", "result": "cryptography"},
     { "site": "stackoverflow", "first":"machine-learning", "include": "tensorflow", "result": "tensorflow"},
     { "site": "stackoverflow", "first":"machine-learning", "include": "ntlk", "result": "ntlk"},
     { "site": "stackoverflow", "first":"machine-learning", "include": "scikit-learn", "result": "scikit"},

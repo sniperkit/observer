@@ -3,6 +3,7 @@ package datastore
 import (
 	"github.com/demas/observer/pkg/models"
 	"strings"
+	"fmt"
 )
 
 // возвращает непрочитанные теги первого уровня
@@ -122,6 +123,12 @@ func (ds *DataStore) UpdateStackQuestionRating(id uint32, score int) {
 	tx := db.Begin()
 	tx.Model(StackQuestion{}).Where("question_id = ?", id).First(&question)
 	question.Score = score
+
+	if question.QuestionId == 48166311 {
+		fmt.Println("dsad")
+
+	}
+
 	if score < 0 {
 
 		stackTag := StackTag{}

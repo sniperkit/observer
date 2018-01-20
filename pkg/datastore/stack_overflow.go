@@ -10,7 +10,7 @@ import (
 func (ds *DataStore) GetStackTags() []models.StackTag {
 
 	result := []models.StackTag{}
-	db.Where("unreaded > 0 and hidden = 0 and details = ''").Find(&result)
+	db.Where("unreaded > 0 and details = ''").Order("hidden, classification").Find(&result)
 	return result
 }
 
@@ -25,7 +25,8 @@ func (ds *DataStore) GetSecondTagByClassification(classification string) interfa
 	result := []Result{}
 	db.Model(StackTag{}).
 		Select("details, unreaded as count").
-			Where("classification = ? and details != '' and hidden = 0 and unreaded > 0", classification).Scan(&result)
+			Where("classification = ? and details != '' and unreaded > 0", classification).
+				Order("hidden, details").Scan(&result)
 
 	return result
 }

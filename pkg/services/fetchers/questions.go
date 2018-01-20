@@ -120,5 +120,5 @@ func (f *StackFetcher) Fetch() {
 	}
 
 	go common.DoEvery(time.Minute * time.Duration(syncInterval), fetchQuestions)
-	// go common.DoEvery(time.Hour * 1, fetchRating)
+	go common.DoEvery(time.Hour * 1, fetchRating)
 }

@@ -14,19 +14,11 @@ func (ds *DataStore) GetStackTags() []models.StackTag {
 	return result
 }
 
-func (ds *DataStore) GetSecondTagByClassification(classification string) interface{} {
+func (ds *DataStore) GetSecondTagByClassification(classification string) []models.StackTag {
 
-	// TODO: от этой структуры можно избавиться и просто возвращать коллекцию тегов
-	type Result struct {
-		Details string `json:"details"`
-		Count   int    `json:"count"`
-	}
-
-	result := []Result{}
-	db.Model(StackTag{}).
-		Select("details, unreaded as count").
-			Where("classification = ? and details != '' and unreaded > 0", classification).
-				Order("hidden, details").Scan(&result)
+	result := []models.StackTag{}
+	db.Where("classification = ? and details != '' and unreaded > 0", classification).
+		Order("hidden, details").Find(&result)
 
 	return result
 }

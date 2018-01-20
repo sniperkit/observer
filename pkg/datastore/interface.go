@@ -12,7 +12,7 @@ type IDataStore interface {
 
 	// StackOverflow
 	GetStackTags() []models.StackTag
-	GetSecondTagByClassification(classification string) interface{}
+	GetSecondTagByClassification(classification string) []models.StackTag
 	GetStackQuestionsForRating() []models.StackQuestion
 	GetStackQuestionsByClassification(classification string, limit int) []models.StackQuestion
 	GetStackQuestionsByClassificationAndDetails(classification string, details string) []models.StackQuestion

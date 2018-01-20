@@ -38,6 +38,7 @@ type StackTag struct {
 
 	Id 			   int `json:"Id"`
 	Classification string `json:"Classification"`
+	Details        string `json:"Details"`
 	Unreaded       int `json:"Unreaded"`
 	Hidden         int `json:"Hidden"`
 }

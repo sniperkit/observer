@@ -17,6 +17,7 @@ func InitRoutes() *mux.Router {
 	router.HandleFunc("/stack/question-as-read", controllers.PostWrapHandler(controllers.SetStackQuestionAsReaded)).Methods("POST")
 	router.HandleFunc("/stack/tags/as-read", controllers.PostWrapHandler(controllers.SetStackQuestionsAsReaded)).Methods("POST")
 	router.HandleFunc("/stack/tags/from-time/as-read", controllers.PostWrapHandler(controllers.SetStackQuestionsAsReadedFromTime)).Methods("POST")
+	router.HandleFunc("/stack/tags/{id}/changeVisibility", controllers.PostWrapHandler(controllers.ChangeTagVisibility)).Methods("POST")
 
 	// tags
 	router.HandleFunc("/tags", controllers.WrapHandler(controllers.GetTags))

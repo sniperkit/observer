@@ -64,3 +64,13 @@ func SetStackQuestionsAsReadedFromTime (w http.ResponseWriter, r *http.Request) 
 	return bodyData, err
 }
 
+func ChangeTagVisibility(w http.ResponseWriter, r *http.Request) (interface{}, error) {
+
+	bodyData := new(UniversalPostStruct)
+	err := json.NewDecoder(r.Body).Decode(&bodyData)
+	if err == nil {
+		ds.ChangeStackTagVisibility(bodyData.Id)
+	}
+
+	return bodyData, err
+}

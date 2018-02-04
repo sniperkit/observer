@@ -15,6 +15,6 @@ services:
     image: sameersbn/nginx
     container_name: observer-web
     volumes:
-      - /mnt/qnap/quzx/observer/web:/usr/share/nginx/html
+      - /mnt/qnap/projects/observer/web:/usr/share/nginx/html
     ports:
       - 8085:80

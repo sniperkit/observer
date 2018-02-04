@@ -13,8 +13,8 @@ services:
       - 4000:4000
   web:
     image: sameersbn/nginx
-    container_name: quzx-web
+    container_name: observer-web
     volumes:
-      - /mnt/qnap/quzx/web-dist:/usr/share/nginx/html
+      - /mnt/qnap/quzx/observer/web:/usr/share/nginx/html
     ports:
       - 8085:80

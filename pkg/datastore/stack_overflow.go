@@ -174,3 +174,14 @@ func (ds *DataStore) SetStackQuestionsAsReadedByClassificationFromTime(classific
 
 	// эту операцию имеет смысл делать только при выбранных 2-х тегах
 }
+
+func (ds *DataStore) ChangeStackTagVisibility(tagId int) {
+
+	stackTag := StackTag{}
+
+	tx := db.Begin()
+	tx.First(&stackTag, tagId)
+	stackTag.Hidden = 1 - stackTag.Hidden // revert 1 to 0 and vice versa
+	tx.Save(&stackTag)
+	tx.Commit()
+}

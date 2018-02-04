@@ -21,6 +21,7 @@ type IDataStore interface {
 	SetStackQuestionAsReaded(question_id int)
 	SetStackQuestionsAsReadedByClassification(classification string)
 	SetStackQuestionsAsReadedByClassificationFromTime(classification string, t int64)
+	ChangeStackTagVisibility(tagId int)
 
 	// Tags
 	GetTags() []models.Tag

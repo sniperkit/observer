@@ -27,6 +27,12 @@ func GetStackQuestionsByClassificationAndDetails(w http.ResponseWriter, r *http.
 		mux.Vars(r)["details"]), nil
 }
 
+func GetStackQuestionsByClassificationDetailsAndSorting(w http.ResponseWriter, r *http.Request) (interface{}, error) {
+
+	return ds.GetStackQuestionsByClassificationDetailsAndSorting(mux.Vars(r)["classification"],
+		mux.Vars(r)["details"], mux.Vars(r)["sorting"]), nil
+}
+
 func SetStackQuestionAsReaded (w http.ResponseWriter, r *http.Request) (interface{}, error) {
 
 	type SetStackQuestionAsReadedStruct struct {

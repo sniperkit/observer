@@ -51,6 +51,19 @@ func (ds *DataStore) GetStackQuestionsByClassificationAndDetails(classification 
 	return result
 }
 
+func (ds *DataStore) GetStackQuestionsByClassificationDetailsAndSorting(classification string, details string, sorting string) []models.StackQuestion {
+
+	sorting_mode := "score desc"
+	if sorting != "0" {
+		sorting_mode = "creation_date desc"
+	}
+
+	result := []models.StackQuestion{}
+	db.Model(StackQuestion{}).Where("classification = ? and details = ? and readed = 0", classification, details).
+		Order(sorting_mode).Limit(15).Find(&result)
+	return result
+}
+
 func (ds *DataStore) InsertStackOverflowQuestions(questionsMap map[string][]models.SOQuestion) {
 
 	for site, questions  := range questionsMap {

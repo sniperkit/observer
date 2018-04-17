@@ -16,6 +16,7 @@ type IDataStore interface {
 	GetStackQuestionsForRating() []models.StackQuestion
 	GetStackQuestionsByClassification(classification string, limit int) []models.StackQuestion
 	GetStackQuestionsByClassificationAndDetails(classification string, details string) []models.StackQuestion
+	GetStackQuestionsByClassificationDetailsAndSorting(classification string, details string, sorting string) []models.StackQuestion
 	InsertStackOverflowQuestions(questions map[string][]models.SOQuestion)
 	UpdateStackQuestionRating(id uint32, score int)
 	SetStackQuestionAsReaded(question_id int)

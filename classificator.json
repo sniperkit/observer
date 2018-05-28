@@ -41,7 +41,8 @@
     "dojo", "ms-word", "tampermonkey", "jira", "sapui5", "jszip", "google-form", "jqgrid", "deployd", "sinatra",
     "mediaelement.js", "jwplayer", "assembly","mediawiki", "jfreechart", "juila-lang","codeigniter",
     "ckeditor", "accordion", "masonry", "shopify", "google-drive-sdk", "whatsapp", "slick.js", "tinymce", "skulpt", "ormlite-servicestack",
-    "postgis", "pgadmin-4", "pgadmin", "eclipselink", "oozie", "ibm-bluemix", "битрикс", "jsp", "jsf"],
+    "postgis", "pgadmin-4", "pgadmin", "eclipselink", "oozie", "ibm-bluemix", "битрикс", "jsp", "jsf",
+    "cassandra" , "apache-kafka", "apache-spark" ," hadoop" , "apache-flink" ,"hive" , "hbase" , "thrief" ," apache-zookeeper" , "hdfs"],
   "tag_sets": [
     { "name": ".net", "tags": "c#,.net,xaml,uwp,asp.net-core,asp.net,visual-studio,wcf,visual-studio-2017,.net-core-2.0,asp.net-core-2.0,.net-core,wpf" },
     { "name": "web", "tags": "twitter-bootstrap,svg,css,html5,html" },

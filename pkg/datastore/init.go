@@ -4,6 +4,7 @@ import (
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
 	"fmt"
+	"os"
 )
 
 var db *gorm.DB
@@ -13,7 +14,7 @@ func init() {
 	var err error
 
 	// TODO: вынести в параметры
-	db, err = gorm.Open("postgres", "host=192.168.1.71 user=root dbname=rss sslmode=disable password=root")
+	db, err = gorm.Open("postgres",  os.Getenv(("DBCONNECTION")))
 	if err != nil {
 
 		// TODO: логирование
